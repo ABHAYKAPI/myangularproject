@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
 
+import { environment } from './../environments/environment';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-tour-of-heroes';
+  constructor() {
+    console.log(environment.production); // Logs false for default environment
+  }
+
+  title = 'app-works';
 }
